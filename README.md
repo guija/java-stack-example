@@ -1,3 +1,14 @@
+Java Stack Example
+===
+
+This is an example application integration multiple commonly used java technologies to have a base skeleton for rapid and proper application development.
+
+TODO
+===
+
+- REST APIs with versioning and either auto generating swagger / OpenAPI
+- Syntax checking
+
 Used frameworks
 ===
 
