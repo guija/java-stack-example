@@ -1,7 +1,18 @@
+Used frameworks
+===
+
+- spring boot
+- spring
+- liquibase
+- hibernate
+- lombock
+- docker
+- docker-compose
+
 Configuration files
 ===
 
-Dependencies and build
+Dependencies, and configuration files
 ---
 
     pom.xml
@@ -12,7 +23,11 @@ Database connection for spring boot application
 
 Database connection for manual maven liquibase commands
 
-    src/
+    src/resources/liquibase.properties
+
+Folder for database migrations (using liquibase)
+
+    src/resources/db/changelog
 
 Build
 ===
