@@ -8,6 +8,7 @@ TODO
 
 - REST APIs with versioning and either auto generating swagger / OpenAPI
 - Syntax checking
+- CloudFormation script for deploying to AWS
 
 Used frameworks
 ---
