@@ -4,13 +4,13 @@ Java Stack Example
 This is an example application integration multiple commonly used java technologies to have a base skeleton for rapid and proper application development.
 
 TODO
-===
+---
 
 - REST APIs with versioning and either auto generating swagger / OpenAPI
 - Syntax checking
 
 Used frameworks
-===
+---
 
 - spring boot
 - spring
@@ -21,7 +21,7 @@ Used frameworks
 - docker-compose
 
 Configuration files
-===
+---
 
 Dependencies, and configuration files
 
@@ -40,7 +40,7 @@ Folder for database migrations (using liquibase)
     src/resources/db/changelog
 
 Build
-===
+---
 
 Compiling
 
@@ -55,7 +55,7 @@ Build docker image without tests
     mvn install dockerfile:build -DskipTests
 
 Run
-===
+---
 
 Run mysql and application with docker-compose
 
@@ -66,7 +66,7 @@ Start only the database if you want to analyse the content
     docker-compose up db
 
 Testing
-===
+---
 
 Running unit and integration tests
 
@@ -82,7 +82,7 @@ Get all users (Using [httpie](https://httpie.org/))
 
 
 Liquibase for database migrations
-===
+---
 
 Generate a database from the database that is configured in `src/resource/liquibase.properties`.
 
