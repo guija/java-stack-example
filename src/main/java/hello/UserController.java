@@ -8,22 +8,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @Controller
 @RequestMapping(path="/user")
+@Api(description = "CRUD for User resource")
 public class UserController {
 
 	@Autowired
 	private UserRepository userRepository;
 
+	@ApiOperation(value="Add a new user to the database")
 	@PostMapping(path="/add")
-	public @ResponseBody String addNewUser (
-        @RequestParam String name,
-        @RequestParam String email,
-		@RequestParam String lastName,
-		@RequestParam String address) {
-
-		// @ResponseBody means the returned String is the response, not a view name
-		// @RequestParam means it is a parameter from the GET or POST request
+	public @ResponseBody User addNewUser (
+			@RequestParam String name,
+			@RequestParam String email,
+			@RequestParam String lastName,
+			@RequestParam String address) {
 
 		User user = new User();
 		user.setName(name);
@@ -32,10 +34,11 @@ public class UserController {
 		user.setAddress(address);
 		userRepository.save(user);
 
-        return "Saved";
+        return user;
         
 	}
 
+	@ApiOperation(value = "Get list of all users")
 	@GetMapping(path="/all")
 	public @ResponseBody Iterable<User> getAllUsers() {
 		// This returns a JSON or XML with the users

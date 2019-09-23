@@ -20,6 +20,8 @@ services:
     image: janneracero/spring-example:latest
     ports:
       - 8080:8080
+    depends_on: 
+      - "db"
 
 volumes:
   db-volume:

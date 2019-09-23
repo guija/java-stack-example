@@ -20,6 +20,7 @@ Used frameworks
 - lombock
 - docker
 - docker-compose
+- swagger (Swagger Fox)
 
 Configuration files
 ---
@@ -88,3 +89,14 @@ Liquibase for database migrations
 Generate a database from the database that is configured in `src/resource/liquibase.properties`.
 
     mvn liquibase:generateChangeLog
+
+Swagger
+---
+
+See swagger metadata
+
+    http://localhost:8080/v2/api-docs
+
+Open Swagger UI
+
+    http://localhost:8080/swagger-ui.html
